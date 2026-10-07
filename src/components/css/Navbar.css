@@ -1,0 +1,26 @@
+.navbar {
+    background-color: var(--color-primary);
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.navbar a {
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    text-decoration: none;
+    color: var(--color-white);
+    transition: var(--transition-normal);
+}
+.navbar a:hover {
+    border-color: var(--color-bg);
+    border-radius: 15px;
+}

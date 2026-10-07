@@ -1,13 +1,14 @@
+import './css/Navbar.css'
 import { Link } from "react-router-dom"
 export default function Navbar() {
     return (
-        <nav>
+        <nav className='navbar'>
             {/* Link to is used so not whole page is reloaded */}
-            <Link to='/'> الرئيسية</Link>
-            <br />
-            <Link to='/employees'> الموظفين</Link>
-            <br />
-            <Link to='/login'>تسجيل الدخول </Link>
+            <ul>
+                <li><Link to='/' className='navbar__brand'> الرئيسية</Link></li>
+                <li><Link to='/employees' className='navbar__brand'> الموظفين</Link></li>
+                <li><Link to='/login' className='navbar__brand'>تسجيل الدخول </Link></li>
+            </ul>
         </nav>
     )
 }
