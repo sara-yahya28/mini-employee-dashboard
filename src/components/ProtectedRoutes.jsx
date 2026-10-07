@@ -1,4 +1,3 @@
-// سيتم بناؤه بواسطة نورة
-export default function AuthContext() {
-    return null;
+export default function ProtectedRoutes({ children }) {
+    return children;
 }
