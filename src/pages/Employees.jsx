@@ -61,7 +61,7 @@ function Employees() {
             <input
                 type="text"
                 className="search-input"
-                placeholder="ابحث عن موظف ..."
+                placeholder="ابحث عن موظف بالاسم..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 ref={searchInputRef}
