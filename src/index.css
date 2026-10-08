@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
 /* @import url('components/Button.jsx'); */
-:root {
+:root, body.light {
     --color-primary: #800020;
     --color-secondary: #2A6B5C;
     --color-accent: #D45060;
@@ -11,7 +11,7 @@
     --color-text-light: #5A7A72;
     --color-border: #E0D5C5;
     --color-white: #FFFFFF;       
-    --color-black: #000000;       
+    --color-black: #262525;       
     
     --spacing-xs: 4px;
     --spacing-sm: 8px;
@@ -42,6 +42,24 @@
     --transition-normal: 0.3s ease;
 }
 
+body.dark {
+    --color-primary: #4a0013;
+    --color-secondary: #1d4a3f;
+    --color-accent: #d45060;
+    --color-text: #e0f2ed;
+    --color-bg: #121a18;
+    --color-surface: #1a2623;
+    
+    --color-text-light: #94b5ab;
+    --color-border: #2c3e39;
+    --color-white: #ffffff;       
+    --color-black: #ffffff;
+    
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -55,4 +73,5 @@ body {
     font-size: var(--font-size-md);
     direction: rtl;
     line-height: 1.6;
+    transition: background-color var(--transition-normal), color var(--transition-normal);
 }
