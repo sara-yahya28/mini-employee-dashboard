@@ -21,17 +21,28 @@ function Employees() {
     const columns = ['الاسم', 'البريد الإلكتروني', 'المدينة'];
     //تبسيط البيانات لتناسب الأعمدة في Table.jsx
     const tableData = users.map((user) => ({
+        id: user.id,
         name: user.name,
         email: user.email,
         city: user.address.city,
     }));
+
+    const handleDelete = (id) => {
+        const updatedUsers = users.filter((user) => user.id !== id);
+        setUsers(updatedUsers);
+    };
+
     if (loading) return <TableSkeleton rows={5} columns={3} />;
     if (error) return <p>حدث خطأ: {error}</p>;
     return (
         <div className="employees-page">
             <h1>قائمة الموظفين</h1>
-            <Table data={tableData} columns={columns} />
+            <Table
+                data={tableData}
+                columns={columns}
+                onDelete={handleDelete}
+            />
         </div>
-        );
+    );
 }
 export default Employees;

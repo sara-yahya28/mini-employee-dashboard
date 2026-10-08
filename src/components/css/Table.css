@@ -35,3 +35,18 @@
 .table tbody tr:last-child td {
     border-bottom: none;
 }
+
+.delete-btn {
+  background-color: #8b1a1a;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #a52020;
+}
