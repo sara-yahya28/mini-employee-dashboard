@@ -1,4 +1,5 @@
 import './css/Table.css'
+import Button from './Button';
 export default function Table({ data = [], columns = [], onDelete }) {
     //                                                    ↑ أضفنا onDelete كـ prop اختياري
 
@@ -28,12 +29,12 @@ export default function Table({ data = [], columns = [], onDelete }) {
                         {/* أضافة خلية تحتوي زر الحذف (تظهر فقط عند onDelete) */}
                         {onDelete && (
                             <td>
-                                <button
-                                    className='delete-btn'
+                                <Button
+                                    variant="danger"
                                     onClick={() => onDelete(emp.id)}
                                 >
                                     حذف
-                                </button>
+                                </Button>
                             </td>
                         )}
                     </tr>
