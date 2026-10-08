@@ -13,14 +13,23 @@
     gap: var(--spacing-xl);
 }
 
-.navbar a {
+.navbar a ,
+.theme-toggle-btn{
     padding: 5px 10px;
     border: 2px solid transparent;
     text-decoration: none;
     color: var(--color-white);
     transition: var(--transition-normal);
+
+    /* إزالة تنسيقات الزر الافتراضية */
+    background: transparent;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
 }
-.navbar a:hover {
+.navbar a:hover,
+.theme-toggle-btn:hover {
     border-color: var(--color-bg);
     border-radius: 15px;
 }
+
