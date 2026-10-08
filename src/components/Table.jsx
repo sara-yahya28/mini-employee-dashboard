@@ -1,7 +1,8 @@
+import './css/Table.css'
 export default function Table({ data = [], columns = [] }) {
 
     return (
-        <table>
+        <table className='table'>
             <thead>
                 <tr>
                     {/* لكل عمود، اعرضي النص مباشرة */}
