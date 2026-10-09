@@ -1,21 +1,12 @@
-.employees-page {
-  padding: 20px 40px;
-}
-
-.employees-page h1 {
-  text-align: center;
-  color: #8b1a1a;
-  margin-bottom: 20px;
-}
-
-/*  شريط البحث  */
 .search-wrapper {
+  display: flex;
+  justify-content: center;
   margin: 20px 0;
 }
 
 .search-input {
-  display: block;           
-  margin: 0 auto;          
+  display: block;
+  margin: 0 auto;
   width: 320px;
   padding: 12px 45px 12px 15px;
   border: 2px solid #ddd;
