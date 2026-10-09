@@ -2,7 +2,8 @@ import { useState, useEffect, useMemo, useRef } from 'react';
 import { useFetch } from '../hooks/useFetch';
 import Table from '../components/Table';
 import TableSkeleton from '../components/TableSkeleton';
-import '../components/css/Employees.css';
+import SearchInput from '../components/SearchInput';
+import './css/Employees.css';
 
 function Employees() {
     //جلب البيانات
@@ -26,7 +27,7 @@ function Employees() {
     // التركيز التلقائي على حقل البحث عند فتح الصفحة
     useEffect(() => {
         if (searchInputRef.current) {
-            serchInputRef.current.focus();
+            searchInputRef.current.focus();
         }
     }, []);
     //useMemo لتصفية المستخدمين حسب البحث
@@ -57,14 +58,13 @@ function Employees() {
     return (
         <div className="employees-page">
             <h1>قائمة الموظفين</h1>
-            {/*  حقل البحث */}
-            <input
-                type="text"
-                className="search-input"
-                placeholder="ابحث عن موظف بالاسم..."
+
+            {/*  حقل البحث (مكون منفصل) */}
+            <SearchInput
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                ref={searchInputRef}
+                onChange={setSearchTerm}
+                inputRef={searchInputRef}
+                placeholder="ابحث عن موظف بالاسم..."
             />
 
             <Table
